@@ -24,6 +24,9 @@ from fla.models.rwkv7 import RWKV7Config, RWKV7ForCausalLM, RWKV7Model
 from fla.models.samba import SambaConfig, SambaForCausalLM, SambaModel
 from fla.models.transformer import (TransformerConfig, TransformerForCausalLM,
                                     TransformerModel)
+from fla.models.power_attn import (PowerAttentionConfig,
+                                   PowerAttentionForCausalLM,
+                                   PowerAttentionModel)
 
 __all__ = [
     'ABCConfig', 'ABCForCausalLM', 'ABCModel',
@@ -42,5 +45,6 @@ __all__ = [
     'RWKV6Config', 'RWKV6ForCausalLM', 'RWKV6Model',
     'RWKV7Config', 'RWKV7ForCausalLM', 'RWKV7Model',
     'SambaConfig', 'SambaForCausalLM', 'SambaModel',
-    'TransformerConfig', 'TransformerForCausalLM', 'TransformerModel'
+    'TransformerConfig', 'TransformerForCausalLM', 'TransformerModel',
+    'PowerAttentionConfig', 'PowerAttentionForCausalLM', 'PowerAttentionModel',
 ]
