@@ -11,6 +11,9 @@ from fla.modules import FusedRMSNormSwishGate, RMSNorm, ShortConvolution, Rotary
 from fla.modules.activations import ACT2FN
 from power_attention import power_full_triton
 
+# It's already a Triton kernel, we don't want more Triton in our Triton
+power_full_triton = torch.compiler.disable(power_full_triton)
+
 if TYPE_CHECKING:
     from fla.models.utils import Cache
 

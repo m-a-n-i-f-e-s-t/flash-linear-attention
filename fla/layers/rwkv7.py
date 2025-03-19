@@ -157,7 +157,7 @@ class RWKV7Attention(nn.Module):
         # I think .to(torch.float) is unnecessary here, since we calculate lora in bloat16
         # when we apply sigmoid, bf16 input will not have numerical issue
         # FIXME: check if we can remove .to(torch.float)
-        w = -0.6065306597126334 * self.w_lora(xw).to(torch.float).sigmoid()
+        w = -0.6065306597126334 * self.w_lora(xw).to(r.dtype).sigmoid()
 
         k = self.k_proj(xk)
         v = self.v_proj(xv)
@@ -183,8 +183,8 @@ class RWKV7Attention(nn.Module):
         cu_seqlens = kwargs.get('cu_seqlens', None)
         o, recurrent_state = rwkv7_fn(
             r=r,
-            w=w,
-            k=k,
+            w=w.to(r.dtype),
+            k=k.to(r.dtype),
             v=v,
             a=-kk,
             b=kk * a,
