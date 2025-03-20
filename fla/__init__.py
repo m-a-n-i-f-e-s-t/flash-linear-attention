@@ -15,7 +15,8 @@ from fla.models import (ABCForCausalLM, ABCModel, BitNetForCausalLM,
                         LinearAttentionForCausalLM, LinearAttentionModel,
                         RetNetForCausalLM, RetNetModel, RWKV6ForCausalLM,
                         RWKV6Model, RWKV7ForCausalLM, RWKV7Model,
-                        TransformerForCausalLM, TransformerModel)
+                        TransformerForCausalLM, TransformerModel,
+                        OGSympowForCausalLM, OGSympowModel)
 
 __all__ = [
     'ABCAttention',
@@ -61,7 +62,9 @@ __all__ = [
     'RWKV7ForCausalLM',
     'RWKV7Model',
     'TransformerForCausalLM',
-    'TransformerModel'
+    'TransformerModel',
+    'OGSympowForCausalLM',
+    'OGSympowModel',
 ]
 
 __version__ = '0.1'

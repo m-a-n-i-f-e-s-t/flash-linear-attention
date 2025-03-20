@@ -27,6 +27,9 @@ from fla.models.transformer import (TransformerConfig, TransformerForCausalLM,
 from fla.models.power_attn import (PowerAttentionConfig,
                                    PowerAttentionForCausalLM,
                                    PowerAttentionModel)
+from fla.models.og_sympow import (OGSympowConfig,
+                                   OGSympowForCausalLM,
+                                   OGSympowModel)
 
 __all__ = [
     'ABCConfig', 'ABCForCausalLM', 'ABCModel',
@@ -47,4 +50,5 @@ __all__ = [
     'SambaConfig', 'SambaForCausalLM', 'SambaModel',
     'TransformerConfig', 'TransformerForCausalLM', 'TransformerModel',
     'PowerAttentionConfig', 'PowerAttentionForCausalLM', 'PowerAttentionModel',
+    'OGSympowConfig', 'OGSympowForCausalLM', 'OGSympowModel',
 ]
